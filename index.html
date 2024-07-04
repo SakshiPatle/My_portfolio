@@ -1,0 +1,543 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+    <style>
+        .cont {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+padding-left: 30px;
+align-items: center;
+margin: 0 auto; 
+padding-top: 50px;
+padding-bottom: 0px;
+}
+
+
+
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 2px solid blue;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.timeline-item .dot {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 50%;
+    border: 2px solid white;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.content{
+  font-family: "Poppins", sans-serif;
+}
+
+.timeline-item .content {
+    flex: 1;
+}
+
+.timeline-item h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.timeline-item .details {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+
+
+.contss {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0 auto;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 400px;
+        }
+        .box img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+           
+            margin-right: 150px;
+        }
+        .box .text {
+            flex: 1;
+        }
+
+        .text h3{
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+        @media (max-width: 600px) {
+            .box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .box img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="font-nunito">
+    <!-- into section -->
+    <div
+      class="h-1/2 lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden"
+    >
+      <!-- navbar -->
+      <nav class="w-full fixed top-0 bg-white z-10 dark:bg-slate-900">
+        <div class="container mx-auto py-5 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            
+            <span class="text-2xl font-bold text-indigo-900 dark:text-white"
+              ></span
+            >
+          </div>
+          <ul
+            class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
+          >
+            <li class="hover:text-gray-500">
+              <a href="#">Home</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#about">about me</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#services">What i do</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#experience">Experience</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#works">Project</a>
+            </li>
+            <li class="hover:text-gray-500">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+          <img
+            id="moon"
+            src="./img/moon.png"
+            class="hidden md:block w-5 cursor-pointer"
+            alt=""
+          />
+          <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-20">
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+          </div>
+          <ul
+            id="menu"
+            class="hidden bg-indigo-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center"
+          >
+            <li>
+              <a id="hLink" href="#">homepage</a>
+            </li>
+            <li>
+              <a id="hLink" href="#about">about me</a>
+            </li>
+            <li>
+              <a id="hLink" href="#services">What i do</a>
+            </li>
+            <li>
+              <a id="hLink" href="#experience">experience</a>
+            </li>
+            <li>
+              <a id="hLink" href="#works">project</a>
+            </li>
+            <li>
+              <a id="hLink" href="#contact">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- intro content -->
+      <!-- image -->
+      <img
+        class="absolute bottom-0 right-0 lg:left-0 mx-auto h-4/5 object-cover"
+        src="./img/Main_banner.png"
+        alt=""
+      />
+      <!-- circle -->
+      <div
+        class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big bg-indigo-900 rounded-full -z-10"
+      ></div>
+      <!-- animated text -->
+      <div
+        class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold"
+      >
+        <span class="text-gray-600">Frontend</span>
+        <p id="text" class="text-red-500"></p>
+      </div>
+      <!-- texts -->
+      <div
+        class="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-800 p-6 h-fit w-1/3"
+      >
+        <h1 class="text-4xl font-bold text-indigo-900">Hi, I'm Sakshi</h1>
+        <p class="text-gray-400">
+            Love bringing creative ideas to digital life. I enjoy sharing my knowledge and experiences through coding a website. I'm a creative Frontend Developer with a passion for crafting engaging and interactive user experiences.
+        </p>
+        <a
+          class="bg-indigo-600 text-white text-l px-3 py-2 rounded-md font-semibold w-fit"
+          href="#about"
+          >More About Me</a
+        >
+      </div>
+    </div>
+    <!-- about -->
+    <div id="about" class="px-10 dark:bg-slate-900">
+      <div
+        class="container mx-auto py-40 flex flex-col-reverse lg:flex-row items-center gap-20"
+      >
+        <!-- left -->
+        <div class="relative">
+          <img
+            class="h-1/4 absolute top-0 left-0 -z-10"
+            src="./img/dots.png"
+            alt=""
+          />
+          <div class="h-full rounded-full overflow-hidden">
+            <img src="./img/sakshi.jpg" alt="" />
+          </div>
+        </div>
+        <!-- right -->
+        <div class="my-auto flex flex-col gap-3">
+          <h1 class="text-indigo-600 font-bold">ABOUT ME</h1>
+          <h1 class="text-3xl font-medium dark:text-white">Frontend Developer</h1>
+          <h1 class="text-3xl font-medium dark:text-white">
+            Web Developer
+          </h1>
+          <p class="text-gray-400">
+            Hi, I'm Sakshi Patle, a Frontend Developer at Hypotenuse. I graduated in 2023 with a degree in Computer Science Engineering from Nashik, Maharashtra. </p>
+            <p class="text-gray-400">I'm passionate about creating websites from scratch and have extensive experience with WordPress. My expertise lies in crafting engaging and interactive user experiences using my strong frontend and web development skills. I enjoy the challenge of bringing creative ideas to life and am always eager to learn and explore new technologies in the field.
+          </p>
+          <p class="text-gray-400">
+            I love making fun, interactive things with code. Whether it's developing dynamic web pages,
+             building websites, or creating unique user interfaces, I find immense joy in bringing
+              my creative ideas to life through programming. I thrive on the challenge of making experiences that captivate and delight users.
+          </p>
+          <h2 class="text-gray-400 font-medium">HTML</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Javascript</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">React</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">CSS</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Tailwind CSS</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-5/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">Wordpress</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-full bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+          <h2 class="text-gray-400 font-medium">MySQL</h2>
+          <div class="w-full bg-gray-200 h-1.5 rounded-md">
+            <div class="w-4/6 bg-indigo-600 h-1.5 rounded-md"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- services -->
+    <div id="services" class="dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold text-3xl">What I do?</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            My expertise spans web development, transforming PSD designs into pixel-perfect HTML, and creating responsive websites that adapt seamlessly across devices.
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="./img/webdevelopment.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">Web development</h1>
+            <p class="text-gray-400">
+             HTML,CSS,Javascript, React Js and Wordpress, Tailwind CSS and other you can name it. 
+            </p>
+            
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-5" src="./img/respodesign.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">Responsive Design</h1>
+            <p class="text-gray-400">
+                In 2024, having a mobile-responsive website is essential for your online presence. And I am very good at that!
+            </p>
+           
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="./img/wordpress.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">Wordpress</h1>
+            <p class="text-gray-400">
+                Millions of websites are developed in WordPress; yours can be the next one!
+            </p>
+           
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="./img/aito html.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">Ai to html</h1>
+            <p class="text-gray-400">
+                Do you have a nice design in Illustrator? I'll convert them into fully responsive, nice looking websites!
+            </p>
+            
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="./img/aito html.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">PSD to html</h1>
+            <p class="text-gray-400">
+                Do you have a nice design in Photoshop? I'll convert them into fully responsive, nice looking websites!
+            </p>
+           
+          </div>
+          <!-- card -->
+          <div
+            class="w-full md:w-4/12 shadow-xl rounded-lg p-5 my-3 md:my-10 flex flex-col gap-3"
+          >
+            <img class="w-10" src="./img/aito html.png" alt="" />
+            <h1 class="font-medium text-lg dark:text-white">Figma to html</h1>
+            <p class="text-gray-400">
+                Do you have a nice design in Photoshop? I'll convert them into fully responsive, nice looking websites!
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="experience" class="py-40 dark:bg-slate-900">
+        <div class="container mx-auto">
+          <!-- top -->
+          <div class="flex flex-col gap-3 items-center">
+            <h1 class="text-indigo-600 font-bold text-3xl">Work Experience</h1>
+            <p class="w-1/2 text-center text-gray-400">
+              I began my coding journey in 2023, diving deep into the world of web development. Over this time, I've honed my skills, particularly in frontend development, where I excel.
+            </p>
+          </div>
+          <div class="cont">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h2>Frontend Developer at Hypotenuse</h2>
+                        <div class="details">
+                            <p><strong>Duration:</strong> Oct 2023 - Present</p>
+                            <p><strong>Location:</strong> Remote</p>
+                            <p><strong>Responsibilities:</strong></p>
+                            <ul>
+                                <li>Developing user interfaces with HTML, CSS, and JavaScript</li>
+                                <li>Collaborating with backend developers</li>
+                                <li>Ensuring responsive design</li>
+                                <li>Developing website using Wordpress</li>
+                                <li>Host the website</li>
+                                <li>Collaborating with UX,UI designer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="dot"></div>
+                    <div class="content">
+                        <h2>Intern at HS Web Tech pvt. ltd.</h2>
+                        <div class="details">
+                            <p><strong>Duration:</strong> May 2023- Aug 2023</p>
+                            <p><strong>Location:</strong> Remote</p>
+                            <p><strong>Responsibilities:</strong></p>
+                            <ul>
+                                <li>Assisted in web development projects</li>
+                                <li>Worked on bug fixes and feature enhancements</li>
+                                <li>Participated in team meetings</li>
+                                <li>Handle github</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+
+    <!-- works -->
+    <div id="works" class="py-40 dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold text-3xl">PROJECTS</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            Here are my projects that demonstrate my skills and assist designers and developers in bringing their ideas to life. Each project highlights my expertise in web development.
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="p-5 sm:p-0 flex flex-wrap justify-between">
+          <!-- card -->
+          <div class="w-full md:w-5/12 lg:w-20 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110">
+            <a href="https://sakshipatle.github.io/vishwakarma_jewellers/" class="block">
+              <img src="./img/vishwakarma_project.png" class="w-full" />
+            </a>
+            <div class="flex justify-center mt-2">
+              <a href="https://sakshipatle.github.io/vishwakarma_jewellers/" class="text-blue-500 hover:underline text-xl">Vishwakarma Project</a>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="w-full md:w-5/12 lg:w-20 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110">
+            <a href="https://sakshipatle.github.io/TodoList/" class="block">
+              <img src="./img/To-dolist.png" class="w-full" />
+            </a>
+            <div class="flex justify-center mt-2">
+              <a href="https://sakshipatle.github.io/TodoList/" class="text-blue-500 hover:underline text-xl">To-Do List Project</a>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="w-full md:w-5/12 lg:w-20 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110">
+            <a href="https://sakshipatle.github.io/general_blogwebsite/" class="block">
+              <img src="./img/blog_website.png" class="w-full" />
+            </a>
+            <div class="flex justify-center mt-2">
+              <a href="https://sakshipatle.github.io/general_blogwebsite/" class="text-blue-500 hover:underline text-xl">Blog Website Project</a>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="w-full md:w-5/12 lg:w-20 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110">
+            <a href="https://sakshipatle.github.io/music_journal/" class="block">
+              <img src="./img/music_journal.png" class="w-full" />
+            </a>
+            <div class="flex justify-center mt-2">
+              <a href="https://sakshipatle.github.io/music_journal/" class="text-blue-500 hover:underline text-xl">Music Journal project</a>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="w-full md:w-5/12 lg:w-20 shadow-xl rounded-lg my-3 md:my-10 m-1 transition-all hover:scale-110">
+            <a href="https://www.cnvrtool.com/" class="block">
+              <img src="./img/cnvrtool_project.png" class="w-full" />
+            </a>
+            <div class="flex justify-center mt-2">
+              <a href="https://www.cnvrtool.com/" class="text-blue-500 hover:underline text-xl">cnvrtool Website</a>
+            </div>
+          </div>
+          <!-- card -->
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="dark:bg-slate-900">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h1 class="text-indigo-600 font-bold text-3xl">CONTACT</h1>
+          <p class="w-1/2 text-center text-gray-400">
+            Do you have an idea? Let's discuss it and see what we can do
+            together.Connect with me on here. 
+          </p>
+        </div>
+        <!-- bottom -->
+        <div class="contss">
+          <a href="mailto:sakshipatle01@gmail.com">
+            <div class="box">
+                <img src="./img/gmail.png" alt="Image 1">
+                <div class="text">
+                    <h3>Gmail</h3>
+                </div>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/sakshi-patle-a0712019b/">
+          <div class="box">
+              <img src="./img/linkdien.png" alt="Image 2">
+              <div class="text">
+                  <h3>Linkedin</h3>
+                  
+              </div>
+          </div>
+        </a>
+        <a href="https://github.com/SakshiPatle">
+          <div class="box">
+              <img src="./img/github.png" alt="Image 3">
+              <div class="text">
+                  <h3>Github</h3>
+                  
+              </div>
+          </div>
+        </a>
+      </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="w-full bg-gray-800">
+      <div class="container mx-auto py-5 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+         
+          <span class="text-2xl font-bold text-white"></span>
+        </div>
+        <span class="hidden md:block font-medium text-white"
+          >© 2024 . Design with ♥️ by Sakshi Patle.</span
+        >
+      </div>
+    <script src="./app.js"></script>
+    <script src="./autotyping.js"></script
+</body>
+</html>
